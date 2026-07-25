@@ -45,9 +45,17 @@ export function CertLightbox({ cert, onClose }: Props) {
           <a className="btn btn-primary" href={asset(cert.pdf)} target="_blank" rel="noreferrer">
             Open PDF
           </a>
-          <a className="btn btn-ghost" href={cert.verifyUrl} target="_blank" rel="noreferrer" style={{ color: 'var(--navy-900)', borderColor: 'var(--line)' }}>
-            Verify on Learn
-          </a>
+          {cert.verifyUrl ? (
+            <a
+              className="btn btn-ghost"
+              href={cert.verifyUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: 'var(--navy-900)', borderColor: 'var(--line)' }}
+            >
+              Verify credential
+            </a>
+          ) : null}
         </div>
       </div>
     </div>

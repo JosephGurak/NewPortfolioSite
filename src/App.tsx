@@ -156,7 +156,7 @@ export default function App() {
                 <h3>{expertCert.title}</h3>
                 <p>
                   Issued {expertCert.issued} · Valid through {expertCert.validThrough}. Open the
-                  credential to view the certificate PDF or verify on Nexthink Learn.
+                  credential to view the certificate PDF or verify on Nexthink Certified.
                 </p>
                 <div className="cta-row">
                   <button
@@ -166,14 +166,16 @@ export default function App() {
                   >
                     View certificate
                   </button>
-                  <a
-                    className="btn btn-ghost"
-                    href={expertCert.verifyUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Verify
-                  </a>
+                  {expertCert.verifyUrl ? (
+                    <a
+                      className="btn btn-ghost"
+                      href={expertCert.verifyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Verify credential
+                    </a>
+                  ) : null}
                 </div>
               </div>
               <button
