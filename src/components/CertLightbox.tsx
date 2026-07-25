@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import {
-  certVerifyUrl,
+  certVerifyPath,
   type Certification,
 } from '../data/certifications.ts'
 import { asset } from '../lib/asset.ts'
@@ -49,15 +50,14 @@ export function CertLightbox({ cert, onClose }: Props) {
             Open PDF
           </a>
           {cert.accredibleId ? (
-            <a
+            <Link
               className="btn btn-ghost"
-              href={certVerifyUrl(cert.accredibleId)}
-              target="_blank"
-              rel="noreferrer"
+              to={certVerifyPath(cert.id)}
+              onClick={onClose}
               style={{ color: 'var(--navy-900)', borderColor: 'var(--line)' }}
             >
               Verify credential
-            </a>
+            </Link>
           ) : null}
         </div>
       </div>

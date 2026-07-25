@@ -8,8 +8,16 @@ export type Certification = {
   validThrough: string
   pdf: string
   thumb: string
-  /** Accredible credential UUID for Nexthink Certified full page */
+  /** Accredible credential UUID for Nexthink Certified embed / full page */
   accredibleId: string | null
+}
+
+export function certEmbedUrl(accredibleId: string): string {
+  return `https://certified.nexthink.com/embed/${accredibleId}`
+}
+
+export function certVerifyPath(certId: string): string {
+  return `/verify/${certId}`
 }
 
 export function certVerifyUrl(accredibleId: string): string {
@@ -147,3 +155,7 @@ export const certsByLevel: { level: CertLevel; items: Certification[] }[] = (
   level,
   items: certifications.filter((c) => c.level === level),
 }))
+
+export function findCertification(certId: string): Certification | undefined {
+  return certifications.find((c) => c.id === certId)
+}

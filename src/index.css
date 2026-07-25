@@ -725,6 +725,65 @@ button {
   }
 }
 
+/* —— Verify credential page —— */
+.verify-page .verify-back {
+  color: var(--navy-900);
+  border-color: var(--line);
+}
+
+.verify-main {
+  padding: 1.25rem 0 2.5rem;
+}
+
+.verify-layout {
+  width: min(1280px, calc(100% - 1.5rem));
+  margin-inline: auto;
+}
+
+.verify-head {
+  margin-bottom: 1rem;
+  max-width: 48rem;
+}
+
+.verify-head .section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.35rem;
+}
+
+.verify-head .section-lead {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.verify-frame-wrap {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 16px 48px rgba(11, 31, 58, 0.1);
+}
+
+.verify-frame {
+  display: block;
+  width: 100%;
+  height: min(85vh, 980px);
+  min-height: 720px;
+  border: 0;
+}
+
+.verify-actions {
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .verify-frame {
+    min-height: 560px;
+    height: 75vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-copy,
