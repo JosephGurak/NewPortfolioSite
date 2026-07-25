@@ -725,6 +725,40 @@ button {
   }
 }
 
+/* —— Verify credential page —— */
+.verify-page .verify-back {
+  color: var(--navy-900);
+  border-color: var(--line);
+}
+
+.verify-main {
+  padding-top: 2.5rem;
+}
+
+.verify-frame-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 16px 48px rgba(11, 31, 58, 0.1);
+}
+
+.verify-frame {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: min(70vh, 600px);
+  margin: 0 auto;
+  border: 0;
+}
+
+.verify-actions {
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-copy,

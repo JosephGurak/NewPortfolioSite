@@ -8,8 +8,16 @@ export type Certification = {
   validThrough: string
   pdf: string
   thumb: string
-  /** Accredible / certified.nexthink.com URL when available */
-  verifyUrl: string | null
+  /** Accredible credential UUID for embed + verify page */
+  accredibleId: string | null
+}
+
+export function certEmbedUrl(accredibleId: string): string {
+  return `https://certified.nexthink.com/embed/${accredibleId}`
+}
+
+export function certVerifyPath(certId: string): string {
+  return `/verify/${certId}`
 }
 
 export const certifications: Certification[] = [
@@ -21,7 +29,7 @@ export const certifications: Certification[] = [
     validThrough: 'July 22, 2028',
     pdf: 'certs/joseph-gurak-23e92511-6241-43ae-a94c-2a14ab10933f-certificate-2.pdf',
     thumb: 'certs/thumbs/joseph-gurak-23e92511-6241-43ae-a94c-2a14ab10933f-certificate-2.png',
-    verifyUrl: 'https://certified.nexthink.com/73eb0ddb-f194-428b-b44f-8484f7ac73e4',
+    accredibleId: '73eb0ddb-f194-428b-b44f-8484f7ac73e4',
   },
   {
     id: '8579d8b4-cbd4-4b35-b33c-736390a3cb1e',
@@ -31,7 +39,7 @@ export const certifications: Certification[] = [
     validThrough: 'July 16, 2028',
     pdf: 'certs/joseph-gurak-8579d8b4-cbd4-4b35-b33c-736390a3cb1e-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-8579d8b4-cbd4-4b35-b33c-736390a3cb1e-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '2795067b-649b-4e96-b06f-9a0a2c2a6145',
@@ -41,7 +49,7 @@ export const certifications: Certification[] = [
     validThrough: 'July 20, 2028',
     pdf: 'certs/joseph-gurak-2795067b-649b-4e96-b06f-9a0a2c2a6145-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-2795067b-649b-4e96-b06f-9a0a2c2a6145-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: 'e40c4d54-d9a1-47cb-82f8-a3d1948769cd',
@@ -51,7 +59,7 @@ export const certifications: Certification[] = [
     validThrough: 'July 2, 2028',
     pdf: 'certs/joseph-gurak-e40c4d54-d9a1-47cb-82f8-a3d1948769cd-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-e40c4d54-d9a1-47cb-82f8-a3d1948769cd-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: 'b3693c86-f219-4097-93f6-18d0d5e44261',
@@ -61,7 +69,7 @@ export const certifications: Certification[] = [
     validThrough: 'April 23, 2028',
     pdf: 'certs/joseph-gurak-b3693c86-f219-4097-93f6-18d0d5e44261-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-b3693c86-f219-4097-93f6-18d0d5e44261-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: 'fcbaf4c9-ad26-44ef-81f8-fa7247cc15b5',
@@ -71,7 +79,7 @@ export const certifications: Certification[] = [
     validThrough: 'May 18, 2028',
     pdf: 'certs/joseph-gurak-fcbaf4c9-ad26-44ef-81f8-fa7247cc15b5-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-fcbaf4c9-ad26-44ef-81f8-fa7247cc15b5-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '24907e6d-9b14-41ee-97ed-7b2e758c37cc',
@@ -81,7 +89,7 @@ export const certifications: Certification[] = [
     validThrough: 'June 11, 2028',
     pdf: 'certs/joseph-gurak-24907e6d-9b14-41ee-97ed-7b2e758c37cc-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-24907e6d-9b14-41ee-97ed-7b2e758c37cc-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '2e0df1e0-0fb4-45ea-8b57-fbf1ac56f0b9',
@@ -91,7 +99,7 @@ export const certifications: Certification[] = [
     validThrough: 'May 15, 2028',
     pdf: 'certs/joseph-gurak-2e0df1e0-0fb4-45ea-8b57-fbf1ac56f0b9-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-2e0df1e0-0fb4-45ea-8b57-fbf1ac56f0b9-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: 'e62282fe-0b55-4583-af56-94aef3081c90',
@@ -101,7 +109,7 @@ export const certifications: Certification[] = [
     validThrough: 'May 15, 2028',
     pdf: 'certs/joseph-gurak-e62282fe-0b55-4583-af56-94aef3081c90-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-e62282fe-0b55-4583-af56-94aef3081c90-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '2eeb89b4-0eff-4577-9274-9a2a97f95d95',
@@ -111,7 +119,7 @@ export const certifications: Certification[] = [
     validThrough: 'April 8, 2028',
     pdf: 'certs/joseph-gurak-2eeb89b4-0eff-4577-9274-9a2a97f95d95-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-2eeb89b4-0eff-4577-9274-9a2a97f95d95-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '0be414a6-6fcd-4501-ada2-927aaa9b7354',
@@ -121,7 +129,7 @@ export const certifications: Certification[] = [
     validThrough: 'April 9, 2028',
     pdf: 'certs/joseph-gurak-0be414a6-6fcd-4501-ada2-927aaa9b7354-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-0be414a6-6fcd-4501-ada2-927aaa9b7354-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
   {
     id: '39122e7b-0187-4430-824b-621c3dced0f7',
@@ -131,7 +139,7 @@ export const certifications: Certification[] = [
     validThrough: 'April 8, 2028',
     pdf: 'certs/joseph-gurak-39122e7b-0187-4430-824b-621c3dced0f7-certificate.pdf',
     thumb: 'certs/thumbs/joseph-gurak-39122e7b-0187-4430-824b-621c3dced0f7-certificate.png',
-    verifyUrl: null,
+    accredibleId: null,
   },
 ]
 
@@ -143,3 +151,7 @@ export const certsByLevel: { level: CertLevel; items: Certification[] }[] = (
   level,
   items: certifications.filter((c) => c.level === level),
 }))
+
+export function findCertification(certId: string): Certification | undefined {
+  return certifications.find((c) => c.id === certId)
+}
