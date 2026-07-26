@@ -244,15 +244,15 @@ export function HomePage() {
           <div className="container reveal">
             <header className="section-head">
               <p className="section-kicker">About</p>
-              <h2 className="section-title">Honest path into DEX</h2>
+              <h2 className="section-title">EUC engineer path into DEX</h2>
             </header>
             <p className="about-text">
-              At my current job I use Nexthink as part of IT support work — it is a meaningful tool
-              in my toolkit, not my primary role title. I have invested in Nexthink certifications
-              (including Expert, NQL, and DEX Automation) and build endpoint automation and desktop
-              tools that improve day-to-day experience for people and support teams. I am targeting
-              Digital Employee Experience roles where that combination of platform fluency,
-              scripting, and practical tooling matters.
+              I work as an EUC engineer with platform administration and endpoint ownership — using
+              Nexthink as a core part of how I understand and improve the digital workplace. I have
+              invested in Nexthink certifications (including Expert, NQL, and DEX Automation) and
+              build endpoint automation and desktop tools that improve day-to-day experience for
+              people and EUC teams. I am targeting Digital Employee Experience roles where that
+              combination of platform fluency, scripting, and practical tooling matters.
             </p>
           </div>
         </section>
@@ -265,7 +265,7 @@ export function HomePage() {
             </header>
             <p className="contact-text">
               Open to conversations about Digital Employee Experience, Nexthink-adjacent roles, and
-              IT tooling that makes work feel lighter.
+              EUC tooling that makes work feel lighter.
             </p>
             <div className="contact-links">
               <a className="btn btn-primary" href={`mailto:${siteMeta.email}`}>

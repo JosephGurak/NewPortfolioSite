@@ -14,9 +14,9 @@ export const projects: Project[] = [
     name: 'ReturnTicketer',
     featured: true,
     summary:
-      'Desktop app that generates multiple hardware return tickets in one pass — built for IT support workflows.',
+      'Desktop app that generates multiple hardware return tickets in one pass — built for EUC / hardware return workflows.',
     whyItMatters:
-      'Shows how I turn repetitive EUC/hardware processes into reliable tooling that reduces friction for support teams and employees.',
+      'Shows how I turn repetitive EUC/hardware processes into reliable tooling that reduces friction for EUC teams and employees.',
     stack: ['Tauri', 'Rust', 'TypeScript', 'Vite'],
     url: 'https://github.com/JosephGurak/ReturnTicketer',
   },
@@ -98,7 +98,7 @@ export const proofCapabilities = [
   'NQL',
   'DEX automation',
   'Platform administration',
-  'IT support tooling',
+  'EUC tooling',
   'Endpoint scripting',
 ]
 
@@ -114,7 +114,7 @@ export const skillGroups = [
   },
   {
     title: 'Endpoint & automation',
-    items: ['PowerShell', 'Windows endpoint hygiene', 'IT workflow tooling', 'Desktop remediation scripts'],
+    items: ['PowerShell', 'Windows endpoint hygiene', 'EUC workflow tooling', 'Desktop remediation scripts'],
   },
   {
     title: 'Build & ship',
@@ -126,7 +126,7 @@ export const siteMeta = {
   name: 'Joseph Gurak',
   headline: 'Building better digital employee experience',
   supporting:
-    'I use Nexthink in an IT support context and have certified depth across NQL, DEX automation, and platform administration — while shipping endpoint tooling and practical apps that reduce friction for people at work.',
+    'As an EUC engineer I use Nexthink with certified depth across NQL, DEX automation, and platform administration — while shipping endpoint tooling and practical apps that reduce friction for people at work.',
   email: 'josephgurak@outlook.com',
   github: 'https://github.com/JosephGurak',
   location: 'United States',
