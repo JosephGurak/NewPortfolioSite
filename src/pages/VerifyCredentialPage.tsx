@@ -55,7 +55,7 @@ export function VerifyCredentialPage() {
             <p className="section-kicker">Verified credential</p>
             <h1 className="section-title">{cert.title}</h1>
             <p className="section-lead">
-              Issued {cert.issued} · Valid through {cert.validThrough}
+              Issued {cert.issued}. Valid through {cert.validThrough}
             </p>
           </header>
 

@@ -145,7 +145,7 @@ export function HomePage() {
               <h2 className="section-title">Twelve certifications, Expert spotlight</h2>
               <p className="section-lead">
                 Formal depth across NQL, DEX automation, platform administration, and experience
-                management — earned while using Nexthink in an IT support context, not as a
+                management, earned while using Nexthink in an IT support context, not as a
                 full-time DEX engineer role.
               </p>
             </header>
@@ -155,7 +155,7 @@ export function HomePage() {
                 <span className="level-chip">{expertCert.level}</span>
                 <h3>{expertCert.title}</h3>
                 <p>
-                  Issued {expertCert.issued} · Valid through {expertCert.validThrough}. Open the
+                  Issued {expertCert.issued}. Valid through {expertCert.validThrough}. Open the
                   certificate PDF, or verify the credential on Nexthink Certified.
                 </p>
                 <div className="cta-row">
@@ -205,7 +205,7 @@ export function HomePage() {
                       <img src={asset(cert.thumb)} alt="" />
                       <p className="cert-tile-title">{cert.title}</p>
                       <p className="cert-tile-meta">
-                        {cert.issued} · through {cert.validThrough}
+                        {cert.issued}, through {cert.validThrough}
                       </p>
                     </button>
                   ))}
@@ -247,10 +247,10 @@ export function HomePage() {
               <h2 className="section-title">EUC engineer path into DEX</h2>
             </header>
             <p className="about-text">
-              I work as an EUC engineer with platform administration and endpoint ownership — using
+              I work as an EUC engineer with platform administration and endpoint ownership, using
               Nexthink as a core part of how I understand and improve the digital workplace. I have
               invested in Nexthink certifications (including Expert, NQL, and DEX Automation) and
-              build endpoint automation and desktop tools that improve day-to-day experience for
+              build endpoint automation and desktop tools that improve day to day experience for
               people and EUC teams. I am targeting Digital Employee Experience roles where that
               combination of platform fluency, scripting, and practical tooling matters.
             </p>
@@ -264,7 +264,7 @@ export function HomePage() {
               <h2 className="section-title">Let&apos;s talk DEX</h2>
             </header>
             <p className="contact-text">
-              Open to conversations about Digital Employee Experience, Nexthink-adjacent roles, and
+              Open to conversations about Digital Employee Experience, Nexthink adjacent roles, and
               EUC tooling that makes work feel lighter.
             </p>
             <div className="contact-links">

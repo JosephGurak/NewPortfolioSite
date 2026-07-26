@@ -38,7 +38,7 @@ export function CertLightbox({ cert, onClose }: Props) {
         </button>
         <h3 className="lightbox-title">{cert.title}</h3>
         <p className="cert-tile-meta">
-          Issued {cert.issued} · Valid through {cert.validThrough}
+          Issued {cert.issued}. Valid through {cert.validThrough}
         </p>
         <img src={asset(cert.thumb)} alt={`${cert.title} certificate for Joseph Gurak`} />
         <div className="lightbox-actions">

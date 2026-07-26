@@ -657,7 +657,7 @@ button {
 }
 
 .skill-block li::before {
-  content: '–';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--teal-400);

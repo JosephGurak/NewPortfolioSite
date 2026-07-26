@@ -14,7 +14,7 @@ export const projects: Project[] = [
     name: 'ReturnTicketer',
     featured: true,
     summary:
-      'Desktop app that generates multiple hardware return tickets in one pass — built for EUC / hardware return workflows.',
+      'Desktop app that generates multiple hardware return tickets in one pass, built for EUC and hardware return workflows.',
     whyItMatters:
       'Shows how I turn repetitive EUC/hardware processes into reliable tooling that reduces friction for EUC teams and employees.',
     stack: ['Tauri', 'Rust', 'TypeScript', 'Vite'],
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     name: 'PowerShell endpoint scripts',
     featured: true,
     summary:
-      'Scripts for desktop storage hygiene and Windows theme switching — practical endpoint automation.',
+      'Scripts for desktop storage hygiene and Windows theme switching: practical endpoint automation.',
     whyItMatters:
       'Maps directly to DEX remediation habits: diagnose local device state, act with scripts, and leave the employee with a cleaner experience.',
     stack: ['PowerShell', 'Windows'],
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     name: 'MathSharp + browser extension',
     featured: true,
     summary:
-      'Deterministic math engine (Rust/WASM) with a Chrome side panel — solve, history, and matrices on-device.',
+      'Deterministic math engine (Rust/WASM) with a Chrome side panel for solve, history, and matrices on device.',
     whyItMatters:
       'Shipping a real digital experience: local compute, clear UX, and a product that stays useful without guessing.',
     stack: ['Rust', 'WASM', 'Dioxus', 'Chrome Extension'],
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     name: 'CRAW',
     featured: true,
     summary:
-      'Custom Radial Application Window — a Tauri desktop launcher focused on fast, intentional app access.',
+      'Custom Radial Application Window, a Tauri desktop launcher focused on fast, intentional app access.',
     whyItMatters:
       'Desktop productivity UX matters to employee experience; CRAW explores how launch patterns can feel lighter and more human.',
     stack: ['Tauri', 'Rust', 'CSS'],
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     name: 'studytool',
     featured: false,
     summary: 'Flashcard-style study utility built in Rust.',
-    whyItMatters: 'Small product loops — capture knowledge, practice, improve.',
+    whyItMatters: 'Small product loops: capture knowledge, practice, improve.',
     stack: ['Rust'],
     url: 'https://github.com/JosephGurak/studytool',
   },
@@ -126,7 +126,7 @@ export const siteMeta = {
   name: 'Joseph Gurak',
   headline: 'Building better digital employee experience',
   supporting:
-    'As an EUC engineer I use Nexthink with certified depth across NQL, DEX automation, and platform administration — while shipping endpoint tooling and practical apps that reduce friction for people at work.',
+    'As an EUC engineer I use Nexthink with certified depth across NQL, DEX automation, and platform administration, while shipping endpoint tooling and practical apps that reduce friction for people at work.',
   email: 'josephgurak@outlook.com',
   github: 'https://github.com/JosephGurak',
   location: 'United States',
