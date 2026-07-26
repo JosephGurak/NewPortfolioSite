@@ -1,8 +1,5 @@
 import { useEffect } from 'react'
-import {
-  certVerifyUrl,
-  type Certification,
-} from '../data/certifications.ts'
+import type { Certification } from '../data/certifications.ts'
 import { asset } from '../lib/asset.ts'
 
 type Props = {
@@ -48,10 +45,10 @@ export function CertLightbox({ cert, onClose }: Props) {
           <a className="btn btn-primary" href={asset(cert.pdf)} target="_blank" rel="noreferrer">
             Open PDF
           </a>
-          {cert.accredibleId ? (
+          {cert.verifyUrl ? (
             <a
               className="btn btn-ghost"
-              href={certVerifyUrl(cert.accredibleId)}
+              href={cert.verifyUrl}
               target="_blank"
               rel="noreferrer"
               style={{ color: 'var(--navy-900)', borderColor: 'var(--line)' }}

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import {
   certsByLevel,
-  certVerifyUrl,
   expertCert,
   type Certification,
 } from '../data/certifications.ts'
@@ -167,10 +166,10 @@ export function HomePage() {
                   >
                     View certificate
                   </button>
-                  {expertCert.accredibleId ? (
+                  {expertCert.verifyUrl ? (
                     <a
                       className="btn btn-ghost"
-                      href={certVerifyUrl(expertCert.accredibleId)}
+                      href={expertCert.verifyUrl}
                       target="_blank"
                       rel="noreferrer"
                     >

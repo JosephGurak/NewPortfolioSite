@@ -1,17 +1,14 @@
 import { Link, useParams } from 'react-router-dom'
-import {
-  certEmbedUrl,
-  certVerifyUrl,
-  findCertification,
-} from '../data/certifications.ts'
+import { certEmbedUrl, findCertification } from '../data/certifications.ts'
 import { siteMeta } from '../data/projects.ts'
 import { asset } from '../lib/asset.ts'
 
 export function VerifyCredentialPage() {
   const { certId = '' } = useParams()
   const cert = findCertification(certId)
+  const embedUrl = cert?.verifyUrl ? certEmbedUrl(cert.verifyUrl) : null
 
-  if (!cert || !cert.accredibleId) {
+  if (!cert || !cert.verifyUrl) {
     return (
       <div className="site verify-page">
         <header className="topbar">
@@ -62,14 +59,16 @@ export function VerifyCredentialPage() {
             </p>
           </header>
 
-          <div className="verify-frame-wrap">
-            <iframe
-              src={certEmbedUrl(cert.accredibleId)}
-              title={`${cert.title} verified credential`}
-              className="verify-frame"
-              allowFullScreen
-            />
-          </div>
+          {embedUrl ? (
+            <div className="verify-frame-wrap">
+              <iframe
+                src={embedUrl}
+                title={`${cert.title} verified credential`}
+                className="verify-frame"
+                allowFullScreen
+              />
+            </div>
+          ) : null}
 
           <div className="cta-row verify-actions">
             <a className="btn btn-primary" href={asset(cert.pdf)} target="_blank" rel="noreferrer">
@@ -77,7 +76,7 @@ export function VerifyCredentialPage() {
             </a>
             <a
               className="btn btn-ghost"
-              href={certVerifyUrl(cert.accredibleId)}
+              href={cert.verifyUrl}
               target="_blank"
               rel="noreferrer"
               style={{ color: 'var(--navy-900)', borderColor: 'var(--line)' }}
