@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import {
   certsByLevel,
-  certVerifyPath,
+  certVerifyUrl,
   expertCert,
   type Certification,
 } from '../data/certifications.ts'
@@ -158,7 +157,7 @@ export function HomePage() {
                 <h3>{expertCert.title}</h3>
                 <p>
                   Issued {expertCert.issued} · Valid through {expertCert.validThrough}. Open the
-                  certificate PDF, or verify the credential on the embedded Certified page.
+                  certificate PDF, or verify the credential on Nexthink Certified.
                 </p>
                 <div className="cta-row">
                   <button
@@ -169,9 +168,14 @@ export function HomePage() {
                     View certificate
                   </button>
                   {expertCert.accredibleId ? (
-                    <Link className="btn btn-ghost" to={certVerifyPath(expertCert.id)}>
+                    <a
+                      className="btn btn-ghost"
+                      href={certVerifyUrl(expertCert.accredibleId)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Verify credential
-                    </Link>
+                    </a>
                   ) : null}
                 </div>
               </div>
