@@ -56,10 +56,19 @@ export function HomePage() {
               <span />
               <span />
               <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
             </div>
-            <div className="hero-line" />
-            <div className="hero-line" />
-            <div className="hero-line" />
+            <div className="hero-lines">
+              <div className="hero-line" />
+              <div className="hero-line" />
+              <div className="hero-line" />
+              <div className="hero-line" />
+              <div className="hero-line" />
+            </div>
           </div>
           <div className="container">
             <div className="hero-copy">
