@@ -96,10 +96,10 @@ export const secondaryProjects = projects.filter((p) => !p.featured)
 
 export const proofCapabilities = [
   'NQL',
-  'DEX automation',
-  'Platform administration',
-  'EUC tooling',
-  'Endpoint scripting',
+  'DEX Automation',
+  'Platform Administration',
+  'EUC Tooling',
+  'Endpoint Scripting',
 ]
 
 export const skillGroups = [
