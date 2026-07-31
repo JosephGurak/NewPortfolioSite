@@ -92,7 +92,6 @@ export const projects: Project[] = [
 ]
 
 export const featuredProjects = projects.filter((p) => p.featured)
-export const secondaryProjects = projects.filter((p) => !p.featured)
 
 export const proofCapabilities = [
   'NQL',

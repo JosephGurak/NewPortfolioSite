@@ -515,32 +515,6 @@ button {
   padding-bottom: 0.1rem;
 }
 
-.secondary-work {
-  margin-top: 2.5rem;
-}
-
-.secondary-work h3 {
-  margin: 0 0 0.85rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
-.secondary-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.secondary-list a {
-  color: var(--navy-900);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
 /* —— Credentials —— */
 .cert-spotlight {
   display: grid;

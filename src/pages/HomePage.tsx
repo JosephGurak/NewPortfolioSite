@@ -7,7 +7,6 @@ import {
 import {
   featuredProjects,
   proofCapabilities,
-  secondaryProjects,
   skillGroups,
   siteMeta,
 } from '../data/projects.ts'
@@ -130,19 +129,6 @@ export function HomePage() {
                   </ul>
                 </article>
               ))}
-            </div>
-
-            <div className="secondary-work">
-              <h3>Also building</h3>
-              <ul className="secondary-list">
-                {secondaryProjects.map((project) => (
-                  <li key={project.id}>
-                    <a href={project.url} target="_blank" rel="noreferrer">
-                      {project.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </section>
